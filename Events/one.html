@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")    // one type of adding event 
+    // }
+
+     // attachEvent()   // another type of attaching event 
+
+    // jQuery - on    /// another type 
+
+
+    // document.querySelector('images').addEventListener('click',function(e){
+
+    // }   ,  false )     // this is a good approach 
+
+
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY                                      /// self read all these 
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+//   //                              Event Propgation bubbling and capturing 
+
+
+//Bubbling   [in false bubble will apply ]
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");                                               // this is bubbling first the owl script will run then the ul script runed 
+    //     // e.stopPropagation()                                                    // this uses inside to outside approach like bubble or botm to up 
+    // }, false)
+    
+// Capturing   [ in true capture will apply ]
+
+    //   document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, true)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //                                                                                   ///  in this first the ul script will run then the owl script 
+    // }, true)                                                                          //    this uses top to down approach 
+
+// TO Prevent Event propgation we use stopPropagation()
+
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();                                                       /// it is used to prevent default action 
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+   
+
+
+    // remove a img 
+
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target.tagName);
+    //     if (e.target.tagName === 'IMG') 
+    //     {
+    //         console.log(e.target.id);
+    //         let removeIt = e.target.parentNode
+    //         removeIt.remove()  // direct removing 
+    //     } 
+    // })
+    
+    //removeIt.parentNode.removeChild(removeIt)  // child node removing
+</script>
+</html>
+
+
+
+// js is synchroonus lang BY DEFAULT ie line by line execution is there  
+// js is single threaded (slow lang. as compared to other languages ) but this languages never makes the feel
+it always comes  with it runtime environment 
+
+v8 enigine is  single threaded

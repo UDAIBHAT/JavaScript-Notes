@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.
+                bind(this))   // if bind is not used only the reference will be passed not the values.
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server); // it will print undefined 
+            console.log(this); // here is the reference of this but not values r there 
+            
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
+
+
+// situation 
+
+In React we created a method and in that method their  is a button and when we go to that button and write onclick on them that code doesnot work at all
+
+
+// Solution 
+
+we bind keyword to manaually bind the values 

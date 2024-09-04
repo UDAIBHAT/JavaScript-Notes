@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+
+
+
+    const div = document.createElement('div')
+    //console.log(div);
+    div.className = "main" // this makes two trips 1st reference then updation 
+    div.id = Math.round(Math.random() * 10 + 1)
+    //div.setAttribute("class", "generated title")    /// THIS IS USED WIDELY DUE TO OPTIMIZATION becoz it doesnot  overwrite and makes one one trip for 
+    div.className = "bhat"                              // direct updation without taking reference. 
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "Chai aur code"    // rather using it use createTextNode 
+    const addText = document.createTextNode("Chai aur code")  // it will make textnode not just reaplace the text 
+    div.appendChild(addText)   // then we will attach the apppend the child 
+    document.body.appendChild(div)
+    
+   
+
+
+
+</script>
+</html>

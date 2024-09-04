@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+
+//                                          NOTE -----------------
+
+
+// 1] document.querySelector('h1') // it will select only the first h1 tag found
+
+// 2].innertext will show only displayed text while .innercontent will show show all the text wheather it 
+//    is hidden through css
+
+// 3] .innerHTML will also show the the tags which text contains .
+
+// 4] document.querySelectorAll() // it reutrn the node-list to manuplate it we can apply the indexing like array or for-each its like array but it is not array
+                               
+// 5] document.getElementsByClassName('list-item') // it returns an HTML collection Datatype to manuplate it convert it to array then apply the array properties or simple use indexing or for looping clasic loops will work
+
+
+
+// 14 - 29 pics contain query selectors and get, set attribute , inner text , inner content, inner html , html collection , node-list
+
+//  35:11 till the end of video , manuplation through wikipedia  video:- All DOM selectors NodeList and HTMLCollection | chai aur #javascript
+
+
+//  Child Parent relations in DOM
+
+
+
+    const parent = document.querySelector('.parent')
+    // console.log(parent);  // it will log whole tag with class parrent 
+    // console.log(parent.children);    /// it will log whole children
+    // console.log(parent.children[1].innerHTML);  /// used indexing returned datatype is html collection and will log the inner html of 1st child
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+        
+    // }
+
+
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild);    /// log first child    'a property'
+    // console.log(parent.lastElementChild);     ///  log last child    "a property"
+
+// FINDING PARENT THROUGH CHILD 
+
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);  // WILL LOG NEXT CHILD ELEMENT
+
+    console.log("NODES: ", parent.childNodes);   // CHILD NODES IS A COMPLETE TREE STRUCTURE IT WILL CONTAIN WHOLE
+                                                 //  TREE STRUCTURE INCLUDING COMTS,LINE BRAKES ETC 
+
+
+                                                 //  dISSCUSSION ON NODE LIST IS ON THREE.HTML
+</script>
+</html>
